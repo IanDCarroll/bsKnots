@@ -10,6 +10,8 @@ def lists(selection):
 
     vowels = [ 'a', 'e', 'i', 'o', 'u', 'y' ]
 
+    puVowels = ['apu','epu','ipu','opu','upu','ypu']
+
     consonants = [ 'wh', 'th', 'sh', 'ch', 'dj', 'ng', 'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'w', 'h', 'l', 'r', 'm', 'n' ]
 
     #for diagnostics...
@@ -20,6 +22,8 @@ def lists(selection):
 
     if selection == 'vowels':
 	return vowels
+    elif selection == 'puVowels':
+	return puVowels
     elif selection == 'consonants':
 	return consonants
     elif selection == 'pinYin':

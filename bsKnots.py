@@ -20,11 +20,11 @@ def faceKnot(string):
     return '%s with my face%s' %(string,punc)
 
 def codeKnot(string,code1,code2):
+	decoded = ''
 	for i in range (0,len(code1)):
-	    string.replace(code1[i],code2[i])
-	#just returns input atm...
-	return string
-
+	    decoded = string.replace(code1[i],code2[i])
+	# as pu: TypeError: just returns input atm...
+	return decoded
 
 #palendromize
 #Alphabetize chars
@@ -39,7 +39,7 @@ def codeKnot(string,code1,code2):
 #Enigma
 
 def main():
-    arg0 = raw_input('rvrs, rawR, face, pinYin, wadeGiles, or something else? ')
+    arg0 = raw_input('rvrs, rawR, face, pinYin, wadeGiles, pu, or something else? ')
 
     if arg0 == 'rvrs':
 	arg1 = str(raw_input('Enter text for reversal: '))
@@ -60,6 +60,11 @@ def main():
 	arg2 = lists.lists('wadeGiles')
 	arg3 = lists.lists('pinYin')
 	print codeKnot(arg1,arg3,arg2)
+    elif arg0 == 'pu':
+	arg1 = str(raw_input('enter non-pu text: '))
+	arg2 = lists.lists('vowels')
+	arg3 = lists.lists('puVowels')
+	print codeKnot(arg1,arg2,arg3)
     else:
 	print 'Uh... I haven\'t gotten the Merit Badge for that knot yet.'
 if __name__ == '__main__':
