@@ -26,12 +26,14 @@ def faceKnot(string):
     return '%s with my face' %(string)
 
 def codeKnot(string,code1,code2):
-	decoded = ''
 	for i in range (0,len(code1)):
-	    decoded = string.replace(code1[i],code2[i])
-	# as pu: TypeError: just returns input atm...
-	# BECAUSE THE FOR LOOP IS ERASING THE CHANGES!!!!
-	return decoded
+	    string = string.replace(code1[i],code2[i])
+	return string
+	#making actual changes now. Still has many bugs. 
+	#Mostly because of characters like i, e, o, 
+	#replacing more compicated characters. 
+	#' i' is a temporary solution. 
+	#But that creates further problems down the line.
 
 #palendromize
 #Alphabetize chars
