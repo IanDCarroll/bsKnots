@@ -10,7 +10,9 @@ class Knots {
     public static String rPal(String text) {
 	String message = "Hey... " + text + " isn\'t a palendrome. How am I supposed to reverse that?!";
 	//If statement always returns else...
-	if (text == rvrs(text)) {
+	//in java, == doesn't mean equivalent, 
+	//it means "points to same object in memory space"
+	if (text.equals(rvrs(text))) {
 	    return text;
 	} else {
 	    return message;
