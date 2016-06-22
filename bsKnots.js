@@ -22,13 +22,17 @@ function vmmtKnot(string) {
 	vowel = [ 'a', 'e', 'i', 'o', 'u', 'y' ];
     for ( i=0; i<string.length; i++ ) {
 	if (string[i].search(test) !== -1) {
-	    //replace it with a random vowel
 	    vowelMovement += vowel[Math.floor(Math.random()*vowel.length)];
 	} else {
 	    vowelMovement += string[i];
 	}
     }
     return vowelMovement;
+}
+
+function betrKnot(string) {
+    //will be like vowel movement but with consonants
+    return string;
 }
 
 console.log(rvrsKnot('boogers'));
