@@ -48,6 +48,17 @@ def vmmtKnot(string):
 		vowelMovement += string[i]
 	return vowelMovement
 
+def sortKnot(string):
+	#expand string to list
+	workList = list(string)
+	#sort the list
+	workList.sort()
+	#shrink the list to output string
+	clean = ''.join(workList)
+	return clean
+
+
+
 #palendromize
 #Alphabetize chars
 #shuffle words
@@ -60,7 +71,7 @@ def vmmtKnot(string):
 #Enigma
 
 def main():
-    arg0 = raw_input('rvrs, rPal, rawR, face, pinYin, wadeGiles, pu, vmmt or something else? ')
+    arg0 = raw_input('rvrs, rPal, rawR, face, pinYin, wadeGiles, pu, vmmt, sort or something else? ')
 
     if arg0 == 'rvrs':
 	arg1 = str(raw_input('Enter text for reversal: '))
@@ -92,6 +103,9 @@ def main():
     elif arg0 == 'vmmt':
 	arg1 = str(raw_input('Enter feed for the vowel movement: '))
 	print vmmtKnot(arg1)
+    elif arg0 == 'sort':
+	arg1 = str(raw_input('Enter characters for sorting: '))
+	print sortKnot(arg1)
     else:
 	print 'Uh... I haven\'t gotten the Merit Badge for that knot yet.'
 if __name__ == '__main__':
