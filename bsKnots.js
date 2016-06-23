@@ -30,27 +30,28 @@ function vmmtKnot(string) {
     return vowelMovement;
 }
 
-
-//basically works, but don't know why it doesn't recognize the 'u' in jumps.
 function kansKnot(string) {
 
     var inconsonance = '',
 
-	test = /[(bl)(br)(pl)(pr)(tr)(dr)(cl)(cr)(gl)(gr)(fl)(fr)(th)(thr)(ch)(sh)(shr)(scr)(sch)(sc)(sk)(sl)(sm)(sn)(sp)(spl)(spr)(sph)(st)(str)(sw)(tw)(dw)(squ)(qu)(gw)(wh)(wr)(ft)(ct)(lt)(ld)(lk)(lp)(lb)(lfs)(lf)(lv)(lch)(lg)(lm)(ls)(mp)(mph)(nt)(nd)(nch)(ng)(ns)(nk)(pps)(ps)(pt)(xts)(xt)(ts)(nks)(rks)(ks)(bs)(ds)(gg)(ggs)(gs)(ffs)(fs)(ghs)(ght)(gh)(ths)(ppl)(ttl)(tl)(thm)pbtdkgfvszjwhlrmncqx]/i,
+	test = /[pbtdkgfvszjwhlrmncqx]/i,
 
 	conB = [ 'bl', 'br', 'pl', 'pr', 'tr', 'dr', 'cl', 'cr', 'gl', 'gr',
 		 'fl', 'fr', 'th', 'thr', 'ch', 'sh', 'shr', 'scr', 'sch',
 		 'sc', 'sk', 'sl', 'sm', 'sn', 'sp', 'spl', 'spr', 'sph',
 		 'st', 'str', 'sw', 'tw', 'dw', 'squ', 'qu', 'gw', 'wh',
 		 'wr',  'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z',
-		 'j', 'w', 'h', 'l', 'r', 'm', 'n', 'c', 'q' ]
+		 'j', 'w', 'h', 'l', 'r', 'm', 'n', 'c', 'q', 'p', 'b', 't',
+		 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'w', 'h', 'l', 'r',
+		 'm', 'n', 'c', 'q', 'x' ]
 
 	conE = [ 'ft', 'ct', 'lt', 'ld', 'lk', 'lp', 'lb', 'lf', 'lv', 
 		 'lch', 'lg', 'lm', 'mp', 'mph', 'nt', 'nd', 'nch', 'ng',
 		 'ns', 'nk', 'pt', 'xt', 'ts', 'rk', 'ght', 'gh', 'ppl',
 		 'tl', 'thm', 'sk', 'sp', 'st', 'sh', 'th', 'ch', 'p', 'b',
 		 't', 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'h', 'l', 'r',
-		 'm', 'n' ]
+		 'm', 'n', 'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z',
+		 'j', 'h', 'l', 'r', 'm', 'n', 'c', 'q', 'x' ]
 
     for ( i=0; i<string.length; i++ ) {
 	if (string[i].search(test) !== -1) {
