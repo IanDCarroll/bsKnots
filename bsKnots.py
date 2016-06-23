@@ -1,4 +1,6 @@
 import lists
+import re
+import random
 
 def rvrsKnot(string):
     #todo: do not reverse vowel clusters
@@ -35,10 +37,20 @@ def codeKnot(string,code1,code2):
 	#' i' is a temporary solution. 
 	#But that creates further problems down the line.
 
+def vmmtKnot(string):
+	vowelMovement = ''
+	test = r'[aeiou]'
+	vowel = lists.lists('vowels')
+	for i in range(0,len(string)):
+	    if re.match(test, string[i]):
+		vowelMovement += vowel[random.randint(0,len(vowel)-1)]
+	    else:
+		vowelMovement += string[i]
+	return vowelMovement
+
 #palendromize
 #Alphabetize chars
 #shuffle words
-#vowel movements
 #inconsonants
 #Tom Marvolo Riddle
 #Drunken Censor
@@ -48,7 +60,7 @@ def codeKnot(string,code1,code2):
 #Enigma
 
 def main():
-    arg0 = raw_input('rvrs, rPal, rawR, face, pinYin, wadeGiles, pu, or something else? ')
+    arg0 = raw_input('rvrs, rPal, rawR, face, pinYin, wadeGiles, pu, vmmt or something else? ')
 
     if arg0 == 'rvrs':
 	arg1 = str(raw_input('Enter text for reversal: '))
@@ -70,13 +82,16 @@ def main():
 	arg3 = lists.lists('pinYin')
 	print codeKnot(arg1,arg3,arg2)
     elif arg0 == 'pu':
-	arg1 = str(raw_input('enter non-pu text: '))
+	arg1 = str(raw_input('Enter non-pu text: '))
 	arg2 = lists.lists('vowels')
 	arg3 = lists.lists('puVowels')
 	print codeKnot(arg1,arg2,arg3)
     elif arg0 == 'rPal':
 	arg1 = str(raw_input('Enter palendrome to be reversed: '))
 	print rPalKnot(arg1)
+    elif arg0 == 'vmmt':
+	arg1 = str(raw_input('Enter feed for the vowel movement: '))
+	print vmmtKnot(arg1)
     else:
 	print 'Uh... I haven\'t gotten the Merit Badge for that knot yet.'
 if __name__ == '__main__':
