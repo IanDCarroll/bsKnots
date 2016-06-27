@@ -48,12 +48,23 @@ def vmmtKnot(string):
 		vowelMovement += string[i]
 	return vowelMovement
 
+def kansKnot(string):
+	inconsonance = ''
+	test = r'[pbtdkgfvszjwhlrmncqx]'
+	conB = lists.lists('conBegin')
+	conE = lists.lists('conEnd')
+	for i in range(0,len(string)):
+	    if re.match(test, string[i]):
+		#need nested if for conB and conE usage
+		inconsonance += conB[random.randint(0,len(conB)-1)]
+	    else:
+		inconsonance += string[i]
+	return inconsonance
+
+#inspired by Player of Games by Iain M Banks. Plus it's pretty obvious.
 def sortKnot(string):
-	#expand string to list
 	workList = list(string)
-	#sort the list
 	workList.sort()
-	#shrink the list to output string
 	clean = ''.join(workList)
 	return clean
 

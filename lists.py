@@ -12,7 +12,22 @@ def lists(selection):
 
     puVowels = ['apu','epu','ipu','opu','upu','ypu']
 
-    consonants = [ 'wh', 'th', 'sh', 'ch', 'dj', 'ng', 'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'w', 'h', 'l', 'r', 'm', 'n' ]
+    conBegin = [ 'bl', 'br', 'pl', 'pr', 'tr', 'dr', 'cl', 'cr', 'gl', 'gr',
+		 'fl', 'fr', 'th', 'thr', 'ch', 'sh', 'shr', 'scr', 'sch',
+		 'sc', 'sk', 'sl', 'sm', 'sn', 'sp', 'spl', 'spr', 'sph',
+		 'st', 'str', 'sw', 'tw', 'dw', 'squ', 'qu', 'gw', 'wh',
+		 'wr',  'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z',
+		 'j', 'w', 'h', 'l', 'r', 'm', 'n', 'c', 'q', 'p', 'b', 't',
+		 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'w', 'h', 'l', 'r',
+		 'm', 'n', 'c', 'q', 'x' ]
+
+    conEnd  =  [ 'ft', 'ct', 'lt', 'ld', 'lk', 'lp', 'lb', 'lf', 'lv', 
+		 'lch', 'lg', 'lm', 'mp', 'mph', 'nt', 'nd', 'nch', 'ng',
+		 'ns', 'nk', 'pt', 'xt', 'ts', 'rk', 'ght', 'gh', 'ppl',
+		 'tl', 'thm', 'sk', 'sp', 'st', 'sh', 'th', 'ch', 'p', 'b',
+		 't', 'd', 'k', 'g', 'f', 'v', 's', 'z', 'j', 'h', 'l', 'r',
+		 'm', 'n', 'p', 'b', 't', 'd', 'k', 'g', 'f', 'v', 's', 'z',
+		 'j', 'h', 'l', 'r', 'm', 'n', 'c', 'q', 'x' ]
 
     #for diagnostics...
     #print len(pinYin)
@@ -30,7 +45,10 @@ def lists(selection):
 	return pinYin
     elif selection == 'wadeGiles':
 	return wadeGiles
-
+    elif selection == 'conBegin':
+	return conBegin
+    elif selection == 'conEnd':
+	return conEnd
 
 def main():
 	#for diagnostics...
