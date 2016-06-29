@@ -22,13 +22,13 @@ class Knots {
     //untested!
     public static String vmmt(String text) {
 	String vowelMovement = "";
-	String test = "[aeiouy]"
-	String[] vowel = ['a','e','i','o','u','y'];
-	for (i=0; i<text.length; i++) {
-	  if (text[i].search(test) != -1) {
-	    vowelMovement += vowel[Math.floor(Math.random()*vowel.length)];
+	String test = "[aeiouy]";
+	String[] vowel = {"a","e","i","o","u","y"};
+	for (int i=0; i<text.length(); i++) {
+	  if (text.charAt(i).matches(test) != -1) {
+	    vowelMovement += vowel[(int)Math.floor(Math.random()*vowel.length())];
 	  } else {
-	    vowelMovement += string[i];
+	    vowelMovement += text.charAt(i);
 	  }
 	}
     }
