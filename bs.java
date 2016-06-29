@@ -18,6 +18,20 @@ class Knots {
 	    return message;
 	}
     }
+
+    //untested!
+    public static String vmmt(String text) {
+	String vowelMovement = "";
+	String test = "[aeiouy]"
+	String[] vowel = ['a','e','i','o','u','y'];
+	for (i=0; i<text.length; i++) {
+	  if (text[i].search(test) != -1) {
+	    vowelMovement += vowel[Math.floor(Math.random()*vowel.length)];
+	  } else {
+	    vowelMovement += string[i];
+	  }
+	}
+    }
 }
 
 public class bs {
